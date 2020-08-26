@@ -20,11 +20,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:itemCount="3"
                 tools:listitem="@layout/task_item_view" />
+                
+                
+                @Parcelize
+                @SuppressLint("ParcelCreator")
+                data class TaskItem(
+                @SerializedName("taskName") var taskName: String?,
+                ) : Parcelable
 
 
-@Parcelize
-@SuppressLint("ParcelCreator")
-data class TaskItem(
-        @SerializedName("taskName") var taskName: String?,
- 
-) : Parcelable
+
+
+

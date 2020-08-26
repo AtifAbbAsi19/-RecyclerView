@@ -2,7 +2,7 @@
 import java.lang.ref.WeakReference
 import java.util.concurrent.TimeUnit
 
-class TaskAdapter (var list: ArrayList<TaskItem>) : RecyclerView.Adapter<QualifiedTaskAdapter.TaskViewHolder>() {
+class TaskAdapter (var list: ArrayList<TaskItem>) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     var context: WeakReference<Context?>? = null
 
@@ -34,7 +34,7 @@ class TaskAdapter (var list: ArrayList<TaskItem>) : RecyclerView.Adapter<Qualifi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder = //lambda function
-            TaskAdapter.QualifiedTaskViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.asociation_task_item_view, parent, false), context?.get()!!)
+            TaskAdapter.TaskViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.task_item_view, parent, false), context?.get()!!)
 
     override fun getItemCount(): Int  = taskItemsList.size
             ?: 0 //elvis operator short if else return default size 0

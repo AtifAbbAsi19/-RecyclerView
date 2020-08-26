@@ -27,6 +27,10 @@
                 data class TaskItem(
                 @SerializedName("taskName") var taskName: String?,
                 ) : Parcelable
+                
+                   interface AdapterOnClickListener {
+                       fun onClick(id: Int, position: Int, vararg args: Any?)
+                 }
 
 
 

@@ -26,6 +26,7 @@
                 @SuppressLint("ParcelCreator")
                 data class TaskItem(
                 @SerializedName("taskName") var taskName: String?,
+                @SerializedName("title") var title: String?
                 ) : Parcelable
                 
                    interface AdapterOnClickListener {

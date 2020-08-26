@@ -11,7 +11,7 @@ class TaskAdapter (var list: ArrayList<TaskItem>) : RecyclerView.Adapter<Qualifi
 
     var dispose: CompositeDisposable = CompositeDisposable()
 
-    var commonAdapterOnClickListener: CommonAdapterOnClickListener? = null
+    var adapterOnClickListener: AdapterOnClickListener? = null
 
     init { //init method will call after primary constructor
         this.taskItemsList = ArrayList()
@@ -29,8 +29,8 @@ class TaskAdapter (var list: ArrayList<TaskItem>) : RecyclerView.Adapter<Qualifi
         notifyDataSetChanged()
     }
 
-    fun setCustomClickListener(commonAdapterOnClickListener: CommonAdapterOnClickListener){
-        this.commonAdapterOnClickListener = commonAdapterOnClickListener
+    fun setCustomClickListener(adapterOnClickListener: AdapterOnClickListener){
+        this.adapterOnClickListener = adapterOnClickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder = //lambda function
@@ -48,7 +48,7 @@ class TaskAdapter (var list: ArrayList<TaskItem>) : RecyclerView.Adapter<Qualifi
             dispose.add(
                     RxView.clicks(holder.doNowButton).throttleFirst(1, TimeUnit.SECONDS).subscribe {
                         if (null != commonAdapterOnClickListener) {
-                            commonAdapterOnClickListener?.onClick(1, position, taskItemsList[position])
+                            adapterOnClickListener?.onClick(1, position, taskItemsList[position])
                         }
                     }
             )

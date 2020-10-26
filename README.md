@@ -66,7 +66,7 @@
                     app:tabRippleColor="@null"
                     app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
                    >
-<!--
+
                     <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -78,7 +78,6 @@
                         android:layout_marginStart="8dp"
                         android:text="New" />
            
--->
 
                 </com.google.android.material.tabs.TabLayout>
                 
@@ -149,7 +148,7 @@
             }
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InvitesContactViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
 
         when (viewType) {
         NORMAL_STATE ->

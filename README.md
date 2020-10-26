@@ -45,11 +45,11 @@
  ### -Adapter For Multiple Views
 
 
-private const val NORMAL_STATE = 212
-private const val ADVANCE_STATE = 313
-private const val PRO_STATE = 414
+        private const val NORMAL_STATE = 212
+        private const val ADVANCE_STATE = 313
+        private const val PRO_STATE = 414
 
-class CustomAdapter(arryList: ArrayList<Any>, context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    class CustomAdapter(arryList: ArrayList<Any>, context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     var arryList: MutableList<Any> = arrayListOf()
@@ -139,7 +139,7 @@ class CustomAdapter(arryList: ArrayList<Any>, context: Context) : RecyclerView.A
 
 
      
-}
+    }
 
 
     interface AdapterOnClickListener {
@@ -158,7 +158,7 @@ class CustomAdapter(arryList: ArrayList<Any>, context: Context) : RecyclerView.A
 
 
 
-}
+    }
 
 
 

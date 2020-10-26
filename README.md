@@ -22,6 +22,65 @@
                 tools:itemCount="3"
                 tools:listitem="@layout/task_item_view" />
                 
+ ### -Simple GRID RecyclerView UI   
+
+                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="visible"
+                    android:layout_marginBottom="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category_tabs"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/product_item_view" />
+                    
+                    
+   ### -Simple TAB UI              
+                    
+                     <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/category_tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/tabs_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/green_divider"
+                    app:tabBackground="@drawable/tab_background_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="scrollable"
+
+                    app:tabRippleColor="@null"
+                    app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                   >
+<!--
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="All" />
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="New" />
+           
+-->
+
+                </com.google.android.material.tabs.TabLayout>
                 
  ### -MODEL CLASS (POJO/OBJECT)
                 

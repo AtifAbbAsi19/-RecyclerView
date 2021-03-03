@@ -151,22 +151,35 @@
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
 
         when (viewType) {
-        NORMAL_STATE ->
+        NORMAL_STATE ->{
             NormalViewHolder(
                 LayoutInflater.from(parent.context)
-                    .inflate(R.layout.invite_earn_row_view, parent, false)
+                    .inflate(R.layout.normal_view_item, parent, false)
             )
+           /*   
+              val binding: NormalViewItemBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(parent.context),
+            R.layout.normal_view_item, parent,false)
+
+        return NormalViewHolder(binding)
+
+          val infalter = LayoutInflater.from(parent.context)
+            return VirtualLeaguesViewHolder(
+                NormalViewHolder.inflate(infalter)
+            )*/
+            
+            }
            ADVANCE_STATE -> {
                AdvanceViewHolder(
                    LayoutInflater.from(parent.context)
-                       .inflate(R.layout.invite_earn_row_view, parent, false)
+                       .inflate(R.layout.advance_view_item, parent, false)
                )
           
             }
             else -> {
                 ProViewHolder(
                     LayoutInflater.from(parent.context)
-                        .inflate(R.layout.invite_earn_row_view, parent, false))
+                        .inflate(R.layout.pro_view_item, parent, false))
       
             }
         }
@@ -204,7 +217,7 @@
         fun onClick(id: Any, position: Int, vararg args: Any?)
     }
 
-    class InvitesContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class NormalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
  
        val userNameLabel = itemView.findViewById<AppCompatTextView>(R.id.userNameLabel)

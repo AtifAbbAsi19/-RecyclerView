@@ -231,8 +231,17 @@
 
     }
 
+ ### -Adapter Extension Method
 
-
+    fun View.setRowWidth() {
+        val layoutParam = RecyclerView.LayoutParams(
+          ViewGroup.LayoutParams.MATCH_PARENT,
+          ViewGroup.LayoutParams.WRAP_CONTENT
+    )
+      this.layoutParams = layoutParam
+      this.requestLayout()
+ 
+     }
 
 
 

@@ -164,7 +164,7 @@
         return NormalViewHolder(binding)
 
           val infalter = LayoutInflater.from(parent.context)
-            return VirtualLeaguesViewHolder(
+            return NormalViewItemBinding(
                 NormalViewHolder.inflate(infalter)
             )*/
             

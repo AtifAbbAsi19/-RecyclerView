@@ -162,7 +162,7 @@
             R.layout.normal_view_item, parent,false)
 
         return NormalViewHolder(binding)
-
+         //problem with this approach is that we dnt specify view its parent(view group) width
           val infalter = LayoutInflater.from(parent.context)
             return NormalViewItemBinding(
                 NormalViewHolder.inflate(infalter)
